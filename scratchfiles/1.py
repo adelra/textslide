@@ -1,0 +1,2 @@
+import rst2beamer
+
