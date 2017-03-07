@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request, send_from_directory
 from pptx import Presentation
 
-import textslide.summarize
+from textslide import summarize
 
 app = Flask(__name__)
 
