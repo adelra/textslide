@@ -3,9 +3,9 @@
 from flask import Flask, render_template, request, send_from_directory
 from pptx import Presentation
 import os
-from config import summarize
 
 app = Flask(__name__)
+import summarize
 
 
 @app.route('/Result.html', methods=['POST'])
