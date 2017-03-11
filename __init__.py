@@ -1,1 +1,1 @@
-from config import summarize
+from textslide import summarize

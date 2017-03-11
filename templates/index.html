@@ -10,21 +10,26 @@
 <div align="center">
     <div class="jumbotron">
         <p>
-            Powerpoint creator:
-        </p>
+        <h1>
+            Powerpoint creator
+        </p></h1>
+        <p>Enter Your Text:</p>
         <form action="/Result.html" method="POST">
             <textarea name="TokenText" cols="40" rows="5" wrap="soft">Enter your Text here...</textarea>
-            <br/> <p>How many lines:</p>
+            <br/>
+            <p>How Many Lines:</p>
 
-                <select class="form-control" id="select" name="sentnum" size="3" style="width: 90px;">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-                <br>
-
+            <select class="form-control" id="select" name="sentnum" size="3" style="width: 90px;">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <br />
+            <p>Enter Your Name:</p>
+            <textarea name="Name" wrap="soft"></textarea>
+            <br />
             <input type="submit" class="btn btn-primary" value="Submit">
         </form>
         <p></p>
