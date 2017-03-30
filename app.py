@@ -2,15 +2,16 @@
 # -*- coding: utf-8 -*-
 from flask import Flask, render_template, request, send_from_directory
 from pptx import Presentation
+import textslide.summarize as ts
 import os
 
 app = Flask(__name__)
-import summarize
+
 
 
 @app.route('/Result.html', methods=['POST'])
 def summ():
-    ss = summarize.SimpleSummarizer()
+    ss = ts.SimpleSummarizer()
     text = request.form['TokenText']
     n = request.form['sentnum']
     name = request.form['Name']
@@ -19,7 +20,7 @@ def summ():
     for items in split:
         sum1 = ss.summarize(items, n)
         a.append(sum1)
-    sss = summarize.WordFreq()
+    sss = ts.WordFreq()
     words = sss.top(text)
     prs = Presentation()
     title_slide_layout = prs.slide_layouts[0]
@@ -29,7 +30,7 @@ def summ():
     subtitle = slide.placeholders[1]
     title.text = words[0][0]
     subtitle.text = name
-    n = (a.__len__()) - 1
+    v = (a.__len__()) - 1
     for items in a:
         title_slide_layout = prs.slide_layouts[0]
         slide = prs.slides.add_slide(content_slide_layout)
