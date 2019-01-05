@@ -1,0 +1,2 @@
+# textslide
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a9a22c2f0e804d61a7a3188385c053a9)](https://app.codacy.com/app/adelra/textslide?utm_source=github.com&utm_medium=referral&utm_content=adelra/textslide&utm_campaign=Badge_Grade_Dashboard)
